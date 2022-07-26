@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <title>Home</title>
+</head>
+<body>
+    <div class="nav"></div>
+    <div class="principal-box">
+    <% posts.forEach((posts) => { %>
+        <div class="posts-box">
+            <div class="post-img">
+                <img src = "<%= posts.img %> " alt="ERROR">
+            </div>
+            <div class="post-text">
+                <div>
+                    <h1 class="post-title"><%= posts.title%></h1>
+                    <h2 class="post-content"><%= posts.content %> </h2>
+                    <div class="center"><button class="post-btn"><a href="/viewmore">View More</a></button></div>
+                </div>
+            </div>
+        </div>
+    <%}); %> 
+    </div>
+</body>
+</html>
